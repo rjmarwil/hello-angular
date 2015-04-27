@@ -20,8 +20,13 @@
   .controller('MainController', MainController)
   ;
 
-  MainController.$inject = ['$scope']; 
+  MainController.$inject = ['$scope'];
   function MainController($scope) {
     $scope.corndog = 'Corn-batter-fried meat tube!';
+    $scope.burrito = burrito;
+
+    function burrito() {
+      return 'Burrito with bean and cheese deliciousness!';
+    };
   }
 })();
