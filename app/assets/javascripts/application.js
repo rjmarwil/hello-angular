@@ -27,6 +27,6 @@
 
     function burrito() {
       return 'Burrito with bean and cheese deliciousness!';
-    };
+    }
   }
 })();
