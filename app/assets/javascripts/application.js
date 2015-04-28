@@ -20,12 +20,22 @@
   .controller('MainController', MainController)
   ;
 
-  MainController.$inject = ['$scope'];
-  function MainController($scope) {
-    $scope.corndog = 'Corn-batter-fried meat tube!';
-    $scope.burrito = burrito;
-    $scope.addFood = addFood;
-    $scope.foods = [
+// 5  MainController.$inject = [];
+  function MainController() {
+    // 6
+    var vm = this;
+
+    //1. define first scope variable
+    vm.corndog = 'Corn-batter-fried meat tube!';
+
+    //2. define burrito function
+    vm.burrito = burrito;
+
+    //4. Add form for adding new foods on the fly
+    vm.addFood = addFood;
+
+    //3.
+    vm.foods = [
       'Tasty pascetti',
       'Turrito and tators',
       'Funky butt sauce splattered on the wall'
@@ -36,8 +46,8 @@
     }
 
     function addFood() {
-      $scope.foods.push($scope.newFood);
-      $scope.newFood = '';
+      vm.foods.push(vm.newFood);
+      vm.newFood = '';
     }
   }
 })();
