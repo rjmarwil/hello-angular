@@ -24,9 +24,20 @@
   function MainController($scope) {
     $scope.corndog = 'Corn-batter-fried meat tube!';
     $scope.burrito = burrito;
+    $scope.addFood = addFood;
+    $scope.foods = [
+      'Tasty pascetti',
+      'Turrito and tators',
+      'Funky butt sauce splattered on the wall'
+    ];
 
     function burrito() {
       return 'Burrito with bean and cheese deliciousness!';
+    }
+
+    function addFood() {
+      $scope.foods.push($scope.newFood);
+      $scope.newFood = '';
     }
   }
 })();
